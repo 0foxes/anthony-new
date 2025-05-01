@@ -16,7 +16,12 @@ def pgp():
 
 @app.route("/resume")
 def resume():
-    return render_template("resume.html")
+    return render_template("file.html", title="/static/resume.pdf")
+
+
+@app.route("/coop")
+def coop():
+    return render_template("file.html", title="/static/coop.pdf")
 
 
 @app.route("/projects")
