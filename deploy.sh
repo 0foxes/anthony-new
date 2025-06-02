@@ -1,14 +1,13 @@
-sudo apt update
-sudo apt upgrade -y
-sudo apt autoremove -y
-sudo apt clean
-
 cd src/
 rm -r __pycache__/
-
 git fetch
 git reset --hard origin/main
-pip3 install -r ../requirements.txt
+
+sudo apt update
+sudo apt upgrade -y
+sudo apt install gunicorn3 python3-flask -y
+sudo apt autoremove -y
+sudo apt clean
 
 sudo systemctl restart website
 neofetch
