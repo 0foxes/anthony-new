@@ -5,7 +5,7 @@ git reset --hard origin/main
 
 sudo apt update
 sudo apt upgrade -y
-sudo apt install gunicorn3 python3-flask -y
+sudo apt install gunicorn python3-flask -y
 sudo apt autoremove -y
 sudo apt clean
 
