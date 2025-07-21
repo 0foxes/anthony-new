@@ -24,6 +24,11 @@ def coop():
     return render_template("file.html", title="/static/coop.pdf")
 
 
+@app.route("/transcript")
+def transcript():
+    return render_template("file.html", title="/static/transcript.pdf")
+
+
 @app.route("/projects")
 def projects():
     featured_projects = [
