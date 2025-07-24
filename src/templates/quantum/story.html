@@ -1,0 +1,35 @@
+{% include 'includes/begin.html' %}
+
+<head>
+    <title>Story</title>
+    {% include 'includes/header_scripts.html' %}
+</head>
+
+<body class="resume">
+    <nav class="navbar sticky-top navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand{{ ' active' if request.path == '/quantum'}}" href="/quantum">Anthony</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link{{ ' active' if request.path == '/quantum/faq'}}" href="/quantum/faq">FAQ</a>
+                    <a class="nav-link{{ ' active' if request.path == '/quantum/story'}}"
+                        href="/quantum/story">Story</a>
+                    <a class="nav-link{{ ' active' if request.path == '/quantum/references'}}"
+                        href="/quantum/references">References</a>
+                    <a class="nav-link fas fa-sun fa-3x px-8 icon" id="btnSwitch"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    {% with title="Found in the ruins of a parallel universe" %}
+    {% include 'includes/title.html' %}
+    {% endwith %}
+    <iframe src="/static/quantum/story.pdf" width="100%" height="100%"></iframe>
+    {% include 'includes/footer_scripts.html' %}
+</body>
+
+{% include 'includes/end.html' %}

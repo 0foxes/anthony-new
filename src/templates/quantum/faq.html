@@ -1,0 +1,197 @@
+{% include 'includes/begin.html' %}
+
+<head>
+    <title>FAQ</title>
+    {% include 'includes/header_scripts.html' %}
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand{{ ' active' if request.path == '/quantum'}}" href="/quantum">Anthony</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link{{ ' active' if request.path == '/quantum/faq'}}" href="/quantum/faq">FAQ</a>
+                    <a class="nav-link{{ ' active' if request.path == '/quantum/story'}}"
+                        href="/quantum/story">Story</a>
+                    <a class="nav-link{{ ' active' if request.path == '/quantum/references'}}"
+                        href="/quantum/references">References</a>
+                    <a class="nav-link fas fa-sun fa-3x px-8 icon" id="btnSwitch"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    {% with title="FAQ" %}
+    {% include 'includes/title.html' %}
+    {% endwith %}
+    <div class="container">
+        <div class="text-center col-sm-12 my-auto">
+            <img src="/static/quantum/faq.webp" class="rounded img-profile" alt="Network error, image failed to load.">
+            <br>
+            <caption>Figure 2: Google autocomplete results about quantum computing. Source: Primary</caption>
+            <br>
+            <caption>These are the most common questions worldwide about quantum computing.</caption>
+        </div>
+        <hr>
+        <div class="card mb-4 card-border">
+            <div class="row no-gutters">
+                <div class="col-md-12">
+                    <div class="card-body">
+                        <h3 class="card-title">What is quantum computing anyway?</h3>
+                        <p class="card-text">Most computers only have 2 states at the most basic level; 1 and 0, on and
+                            off, yes and no. Those states can be interpreted in many ways, but each individual part is
+                            one or the other. This two-state representation is called binary. Quantum computers promise
+                            to change that by allowing each component to represent an infinite number of states.
+                            Although still in development, experts can already predict that they will help us secure
+                            data as well as present challenges to existing cryptography methods. Additionally, they have
+                            the potential to improve scientific simulations from the weather to drug research. This is
+                            because the universe is essentially a quantum (and not a binary) system, so quantum
+                            computers are more suitable for simulating it.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-4 card-border">
+            <div class="row no-gutters">
+                <div class="col-md-12">
+                    <div class="card-body">
+                        <h3 class="card-title">How important will quantum computing be?</h3>
+                        <p class="card-text">Many technological innovations are initially dismissed as impossible or
+                            useless. Other innovations are hotly anticipated for the near future but gradually fizzle
+                            out. Quantum computing is not either of those. There have been many breathless predictions
+                            made, although some are more credible than others. The general scientific consensus seems to
+                            be that quantum computing will be very useful in the future, but the experts disagree on
+                            when exactly "the future" is. Quantum computers can already do certain computations that
+                            their non-quantum counterparts cannot, but have yet to actually do anything groundbreaking.
+                            However, other quantum technologies explored during the development of quantum computing
+                            development have been very useful. For more information, see the later answer on quantum key
+                            exchange.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-4 card-border">
+            <div class="row no-gutters">
+                <div class="col-md-12">
+                    <div class="card-body">
+                        <h3 class="card-title">Will quantum computing help AI?</h3>
+                        <p class="card-text">This is an understandable question as both have been heavily featured in
+                            the media. Unfortunately, quantum computing and AI are mostly unrelated besides the fact
+                            that both are from the technology industry. This is to say that they may indirectly help
+                            each other by increasing public attention to technology, but they have no other
+                            relationship. On the flip side, this means that bright scientists interested in technology
+                            generally have to pick between one anda the other—so the industries compete for talent as
+                            well. An interesting anecdote is that Scott Aaronson (a quantum researcher) says that in AI
+                            practice is ahead of research but in quantum research is significantly ahead of practice.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-4 card-border">
+            <div class="row no-gutters">
+                <div class="col-md-12">
+                    <div class="card-body">
+                        <h3 class="card-title">Will quantum computing break encryption/cryptocurrency/Bitcoin?</h3>
+                        <p class="card-text">These three are really all variants of the same question. Encryption
+                            protects data. Both people and businesses use encryption. All cryptocurrencies use
+                            encryption in one form or another. Bitcoin is one such cryptocurrency. As previously
+                            mentioned, quantum computers have the potential to break existing encryption algorithms. In
+                            many cases this is because the algorithms rely on the fact that if you take two large prime
+                            numbers p, q and multiply them to get n = pq, it is very hard to get p and q back from n
+                            even if you have a supercomputer. This process is called factoring. Quantum computers can
+                            use a process called Shor's algorithm to quickly do this. Although existing quantum
+                            computers (as of 2025) are not yet powerful enough to do this, many experts have raised
+                            concerns that future models could. This presents risks to anyone using encryption, which
+                            includes cryptocurrencies like Bitcoin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-4 card-border">
+            <div class="row no-gutters">
+                <div class="col-md-12">
+                    <div class="card-body">
+                        <h3 class="card-title">How far away are quantum computers from breaking encryption?</h3>
+                        <p class="card-text">This question is very hard to answer. For one, we only know the public
+                            state of
+                            quantum computing development. Countries or companies could have secret quantum computers
+                            more
+                            powerful than ones we know of. Additionally, some computer scientists have proposed that
+                            today's
+                            quantum computers are already very close to breaking encryption if we combine them with
+                            classical (non-quantum) computers. Finally, many nations and cybercrime groups are already
+                            collecting encrypted data so they can store it for years and later decrypt it with quantum
+                            computing. The good news is that most experts agree that quantum computers should not be
+                            able to
+                            break encryption today or within the next 2-3 years.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-4 card-border">
+            <div class="row no-gutters">
+                <div class="col-md-12">
+                    <div class="card-body">
+                        <h3 class="card-title">What are governments doing about this?</h3>
+                        <p class="card-text">Broadly speaking, governments around the world are searching for encryption
+                            algorithms that do not rely on prime numbers, and will thus withstand attacks by quantum
+                            computers (as far as we know...). On one level, this means funding research grants so
+                            scientists are paid to research and develop those algorithms. Once algorithms are developed,
+                            government agencies (NIST of the United States for Western countries, GOST of Russia for
+                            Russia and central Asian countries) hold competitions. Scientists submit their algorithms,
+                            NIST invites other scientists to attack them, and a council of experts eventually decide on
+                            which algorithms to recommend. This process is called "standardisation" and every popular
+                            encryption algorithm has gone through it. NIST first began this process in 2016 and has
+                            already published some standards for quantum-safe encryption in 2023 and 2024.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-4 card-border">
+            <div class="row no-gutters">
+                <div class="col-md-12">
+                    <div class="card-body">
+                        <h3 class="card-title">What can I do about this?</h3>
+                        <p class="card-text">For one, you may wish to join the quantum industry if you are young or
+                            looking for a change in career. Apart from that, most people are not equipped to research
+                            ways to defend computers against quantum computing. Nevertheless, you can write to your
+                            political representatives to explain the importance of quantum computing funding.
+                            Additionally, if you work for a company in e-commerce, healthcare, and banking that must
+                            keep data secure for long periods of time, you should be looking into quantum-safe
+                            encryption algorithms.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-4 card-border">
+            <div class="row no-gutters">
+                <div class="col-md-12">
+                    <div class="card-body">
+                        <h3 class="card-title">How can quantum technologies help me be more secure?</h3>
+                        <p class="card-text">Previously, I mentioned that quantum technologies can help us be more
+                            secure. I'll skip explaining the physics, but the key point is that two people communicating
+                            could use a protocol known as "quantum key exchange" to both agree on a secret key to secure
+                            their messages with—even if a third person was listening in the whole time! After the secret
+                            key is established, no further eavesdropping is possible. This security is guaranteed by
+                            physics as we know it. While most people can't go out to buy lasers and satellites to use
+                            this, this technology has been heavily tested in the real world (including at UWaterloo) and
+                            banks and militaries have already started using it.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    {% include 'includes/footer.html' %}
+    {% include 'includes/footer_scripts.html' %}
+    {% include 'includes/copyright.html' %}
+</body>
+
+{% include 'includes/end.html' %}
