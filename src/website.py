@@ -268,26 +268,6 @@ def projects():
     )
 
 
-@app.route("/quantum")
-def quantum():
-    return render_template("quantum/index.html")
-
-
-@app.route("/quantum/faq")
-def faq():
-    return render_template("quantum/faq.html")
-
-
-@app.route("/quantum/story")
-def story():
-    return render_template("quantum/story.html")
-
-
-@app.route("/quantum/references")
-def references():
-    return render_template("quantum/references.html")
-
-
 @app.errorhandler(404)
 def error_404(e):
     return render_template("default.html", title="Not Found", text="404 Not Found"), 404
