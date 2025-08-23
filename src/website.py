@@ -16,17 +16,17 @@ def pgp():
 
 @app.route("/resume")
 def resume():
-    return render_template("file.html", title="/static/resume.pdf")
+    return render_template("file.html", file="/static/resume.pdf", page_title="Résumé")
 
 
 @app.route("/coop")
 def coop():
-    return render_template("file.html", title="/static/coop.pdf")
+    return render_template("file.html", file="/static/coop.pdf", page_title="Coop History")
 
 
 @app.route("/transcript")
 def transcript():
-    return render_template("file.html", title="/static/transcript.pdf")
+    return render_template("file.html", file="/static/transcript.pdf", page_title="Transcript")
 
 
 @app.route("/projects")

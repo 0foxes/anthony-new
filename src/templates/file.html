@@ -1,13 +1,13 @@
 {% include 'includes/begin.html' %}
 
 <head>
-    <title>Résumé</title>
+    <title>{{ page_title }}</title>
     {% include 'includes/header_scripts.html' %}
 </head>
 
 <body class="resume">
     {% include 'includes/header.html' %}
-    <iframe src="{{ title }}" width="100%" height="100%"></iframe>
+    <iframe src="{{ file }}" width="100%" height="100%"></iframe>
     {% include 'includes/footer_scripts.html' %}
 </body>
 
